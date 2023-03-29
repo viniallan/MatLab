@@ -1,0 +1,10 @@
+clc;clear;close all force;
+Tf=32:3.6:93.2;
+Tc=(5/9)*(Tf-32);
+Rho=(5.5289e-8)*(Tc.^(3))-(8.5016e-6)*(Tc.^(2))+(6.5622e-5*Tc)+0.99987;
+plot(Tc,Rho);
+grid on;
+xlabel('Temperatura[Cº]');
+ylabel('Densidade da Agua[g/cm^3]');
+title('Densidade da Água em relação a variação de temperatura');
+legend('Densidade da Água');
