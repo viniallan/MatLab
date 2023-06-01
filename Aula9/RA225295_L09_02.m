@@ -1,4 +1,4 @@
-function [t, y] = RA225295_L09_02(A0,T,n)
+function [t,y] = RA225295_L09_02(A0,T,n)
     % seu código aqui
     an = @(n) (4*A0)./((2*n-1)*pi);
     wn = @(n) (2*n-1)*(pi*2)/T;
