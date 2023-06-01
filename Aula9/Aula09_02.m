@@ -5,7 +5,7 @@ load ex41;
 figure;
 plot(t,y,'or');
 
-w0=3;
+w0=3;  
 
 Z=[ones(length(t),1) cos(w0*t).' sin(w0*t).'];
 a=Z\(y.');

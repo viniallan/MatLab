@@ -1,6 +1,5 @@
 function [dt, tn, df, fmin, fmax, h] = RA225295_L09_03()
     h = figure;
-    % seu código aqui
     fs=128;
     dt=1/fs; 
     n=64;
