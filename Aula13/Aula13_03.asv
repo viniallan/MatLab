@@ -1,0 +1,18 @@
+clc;clear;close all force;
+
+A = [3 0 0
+    0 -2 0
+    0 0 5];
+f = @(t,y) A*y;
+tspan = [0 1];
+y0=[ 1 4 -2].';
+
+
+[t,y]= ode45(f,tspan,y0);
+mu=diag(A)
+y1=y0(1)*exp(mu(1)*t);
+y2=y0(2)*exp(mu(2)*t);
+y3=y0(3)*exp(mu(3)*t);
+figure;
+plot(t,y1,)
+

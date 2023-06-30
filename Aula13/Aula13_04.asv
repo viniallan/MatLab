@@ -1,0 +1,11 @@
+clc;clear;close all force;
+
+A = [ 1 1
+    4 -2];
+[V,D] = eig(A);
+if(det(V)~=0)
+    disp('os autovetores sao LI')
+    disp('portanto,diagonalizam A')
+end
+P=V;
+P\A*P;
