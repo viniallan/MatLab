@@ -5,13 +5,24 @@ function [t,y] = RA225295_L11_04()
     
     [t,y]= ode45(f,t,y0);
     
-    %grafico com a solucao analitica
-    plot(t,y);
-    y2=integral(@(x) -x,0,1)+4*integral(@(x) x,0,1);
-    figure
-    plot(t,y2);
+    %solucao analitica
     
     %{
-    Y(s)/s=-tY(s)+4*t/Y(s)
+    dy/dt = -ty + (4t)/y
+    dy/y = (-ty + (4t)/y) dt
+    dy/y + tdt = 4dt/y
+    ∫(dy/y) + ∫(t*dt) = 4∫(dt/y)
+    ln|y| + (t^2)/2 = 4ln|y| + C
+    ln|y| - 4ln|y| = -(t^2)/2 + C
+    -3ln|y| = -(t^2)/2 + C
+    ln|y^(-3)| = -(t^2)/2 + K
+    |y^(-3)| = e^(-(t^2)/2 + K)
+    |1^(-3)| = e^(-(0^2)/2 + K)
+    1 = e^(K)
+    |y^(-3)| = e^(-(t^2)/2)
+    y^(-3) = e^(-(t^2)/2)
+    y^3 = e^((t^2)/2)
+    y = (e^((t^2)/2))^(1/3)
+    y = e^((t^2)/6)
     %}
 end 
